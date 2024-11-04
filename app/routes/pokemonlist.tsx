@@ -1,6 +1,6 @@
-import type { LoaderFunctionArgs, ActionFunctionArgs} from "@remix-run/node";
+import type { LoaderFunctionArgs} from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { Link,} from "@remix-run/react";
+import { Link, useLoaderData,} from "@remix-run/react";
 
 export async function loader({request}:LoaderFunctionArgs) {
   const url = new URL(request.url);
@@ -42,6 +42,4 @@ export default function PokemonList() {
   );
 }
 
-function useLoaderData(): { data: any; page: any; } {
-  throw new Error("Function not implemented.");
-}
+

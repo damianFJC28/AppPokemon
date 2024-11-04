@@ -1,7 +1,7 @@
 // routes/pokemon/$name.tsx
 import type { LoaderFunctionArgs, ActionFunctionArgs} from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { Link, } from "@remix-run/react";
+import { Link, useLoaderData, } from "@remix-run/react";
 
 
 export async function loader({ params }:LoaderFunctionArgs) {
